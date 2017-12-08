@@ -14,5 +14,6 @@ public class UserController {
 	//@RequestMapping (value = "/yourlinkhere", method = RequestMethod.GET (or POST)
 	//Public blah blah methods here
 	//first test
+	//second test
 
 }
