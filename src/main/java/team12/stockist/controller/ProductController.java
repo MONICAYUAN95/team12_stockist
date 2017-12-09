@@ -47,10 +47,10 @@ public class ProductController {
 	public ModelAndView editProductPage(@PathVariable Integer partID) {
 		// Redirect to product-edit page
 		ModelAndView mav = new ModelAndView("product-edit");
-		// calling the findProduct service method(ProductsServiceImpl class method).
-		// Return the specific product basedon partID
+		// calling the  findProductById service method(ProductsServiceImpl class method).
+		// Return the specific product based on partID
 		// result is stored in variable 'product' of type Product
-		Product product = pservice.findProduct(partID);
+		Product product = pservice.findProductById(partID);
 		mav.addObject("product", product);
 		return mav;
 	}
@@ -62,9 +62,9 @@ public class ProductController {
 	{
 		// REdirect to product-list page
 		ModelAndView mav = new ModelAndView("redirect:/product/list");
-		// calling ProductServiceImpl service class method changeProduct.
+		// calling ProductServiceImpl service class method updateProduct.
 		// update the product
-		pservice.changeProduct(product);
+		pservice.updateProduct(product);
 		String message = "Product is updated";
 		redirectAttributes.addFlashAttribute("message", message);
 		return mav;

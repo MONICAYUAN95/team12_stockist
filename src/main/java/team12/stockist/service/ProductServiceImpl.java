@@ -30,7 +30,7 @@ public class ProductServiceImpl implements ProductService {
 	// Find product based on partID
 	@Override
 	@Transactional
-	public Product findProduct(int partID) {
+	public Product findProductById(int partID) {
 		return prepo.findOne(partID);
 	}
 
@@ -38,7 +38,7 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	@Transactional
 
-	public Product changeProduct(Product p) {
+	public Product updateProduct(Product p) {
 		return prepo.saveAndFlush(p);
 	}
 
