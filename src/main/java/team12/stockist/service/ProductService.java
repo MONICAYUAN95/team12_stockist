@@ -9,5 +9,9 @@ import team12.stockist.model.Product;
 public interface ProductService {
 
 	ArrayList<Product> findAllProduct();
+	Product findProduct(int partID);
+	Product changeProduct(Product product);
+
+	
 
 }

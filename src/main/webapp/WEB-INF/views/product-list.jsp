@@ -47,7 +47,8 @@
 			<td align="left">${p.discontinued}</td>
 
 			
-			<td align="center"><a class="btn btn-primary" href="${pageContext.request.contextPath}/admin/student/edit/${student.id}.html">Edit</a></td>
+			<%-- <td align="center"><a class="btn btn-primary" href="${pageContext.request.contextPath}/edit/${product.partID}">Edit</a></td> --%>
+			<td align="center"><a class="btn btn-primary" href="${pageContext.request.contextPath}/product/edit/${p.partID}.html">Edit</a></td>
 			<td><a class="btn btn-danger" href="${pageContext.request.contextPath}/admin/student/delete/${student.id}.html">Delete</a></td>
 		</tr>
 	</c:forEach>
