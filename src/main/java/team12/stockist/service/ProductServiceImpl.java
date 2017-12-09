@@ -27,19 +27,29 @@ public class ProductServiceImpl implements ProductService {
 		return sl;
 	}
 
-	// Find product based on partID
 	@Override
 	@Transactional
-	public Product findProductById(int partID) {
-		return prepo.findOne(partID);
+	public Product findProductById(Integer productId) {
+		return prepo.findOne(productId);
 	}
 
-	// Update the specific product given as argument
 	@Override
 	@Transactional
+	public Product createProduct(Product product) {
+		return prepo.saveAndFlush(product);
+	}
 
-	public Product updateProduct(Product p) {
-		return prepo.saveAndFlush(p);
+	@Override
+	@Transactional
+	public Product updateProduct(Product product) {
+		return prepo.saveAndFlush(product);
+	}
+
+	@Override
+	@Transactional
+	public void deleteProduct(Product product) {
+		prepo.delete(product);
+
 	}
 
 }

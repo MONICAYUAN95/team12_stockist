@@ -6,12 +6,16 @@ import javax.transaction.Transactional;
 
 import team12.stockist.model.Product;
 
-public interface ProductService {
+public interface ProductService 
+{
 
 	ArrayList<Product> findAllProduct();
-	Product findProductById(int partID);
-	Product updateProduct(Product product);
-
 	
-
+	Product findProductById(Integer productId);
+	
+	Product createProduct(Product product);
+	
+	Product updateProduct(Product product);
+	
+	void deleteProduct(Product product);
 }
